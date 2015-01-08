@@ -18,9 +18,9 @@ class ItemNotify(QObject):
             for elem in self.list:
                 if elem.lower() in item_name.lower():
                     self.new_item.emit(item)
-                    f.write("%s in %s %s\n" % (item_name, elem, item['url']))
+                    f.write("%s == %s %s\n" % (item_name, elem, item['url']))
                 else:
-                    f.write("%s not in %s\n" % (item_name, elem))
+                    f.write("%s != %s\n" % (item_name, elem))
         return item
 
     def open_spider(self, spider):
