@@ -14,7 +14,5 @@ SPIDER_MODULES = ['kassir.spiders']
 NEWSPIDER_MODULE = 'kassir.spiders'
 ITEM_PIPELINES = {'kassir.pipelines.ItemNotify': 200}
 
-#ITEM_PIPELINES = ['kassir_events.pipelines.JsonWithEncodingPipeline']
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'kassir_events (+http://www.yourdomain.com)'

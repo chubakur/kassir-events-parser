@@ -102,7 +102,6 @@ class MainWindow(QtGui.QWidget):
         crawler.crawl(spider)
         crawler.start()
         log.start()
-        #reactor.run()
         Thread(target=reactor.run, args=(False,)).start()
 
     def add_item(self, item):

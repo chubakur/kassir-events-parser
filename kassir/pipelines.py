@@ -6,7 +6,6 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import codecs
-from PyQt4 import QtGui
 from PyQt4.QtCore import pyqtSignal, QObject
 
 
