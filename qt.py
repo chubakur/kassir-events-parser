@@ -66,7 +66,6 @@ class ListEditor(QtGui.QWidget):
 class MainWindow(QtGui.QWidget):
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.resize(250, 100)
         self.layout = QtGui.QVBoxLayout()
         self.btn_layout = QtGui.QHBoxLayout()
         self.loading_label = QtGui.QLabel()
