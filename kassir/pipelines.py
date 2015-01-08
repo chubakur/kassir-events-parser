@@ -25,6 +25,7 @@ class ItemNotify(QObject):
 
     def open_spider(self, spider):
         spider.gui.loading_label.show()
+        spider.gui.checkListBtn.setEnabled(False)
         self.list = spider.gui.list_editor.list
         self.new_item.connect(spider.gui.add_item)
         with codecs.open("trace.log", "w", encoding="utf-8") as f:
@@ -32,4 +33,5 @@ class ItemNotify(QObject):
 
     def close_spider(self, spider):
         spider.gui.loading_label.hide()
+        spider.gui.checkListBtn.setEnabled(True)
         self.new_item.disconnect(spider.gui.add_item)
