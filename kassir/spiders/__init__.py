@@ -8,8 +8,8 @@ from scrapy.contrib.linkextractors import LinkExtractor
 class EventSpider(CrawlSpider):
     name = 'event_spider'
     allowed_domains = ['spb.kassir.ru']
-    start_urls = ['https://spb.kassir.ru/kassir/search?categories=c13&page=\d+']
-    rules = [Rule(LinkExtractor(allow=['/kassir/search/index\?categories=c13']), follow=True),
+    start_urls = ['https://spb.kassir.ru/kassir/search?categories=c&page=\d+']
+    rules = [Rule(LinkExtractor(allow=['/kassir/search/index\?categories=c']), follow=True),
              Rule(LinkExtractor(allow=['/kassir/event/view/\d+']), 'parse_event')]
 
     def __init__(self, gui):
